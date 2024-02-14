@@ -1,0 +1,32 @@
+#attributes
+hair_color = "red/orange"
+eye_color = "blue"  #string
+name = "Alexander"
+age = 16
+height = 6.1  #Integer and a number with a decemal is a float
+hungry = True #boolean
+
+#coditional statements
+if hungry: #this askes if hungry has a condition or thing its equal to. 0 is also false. negative numbers can trigger as true
+    print("have 5 hamburgers")
+
+else:
+    print("here is some water")
+
+if hungry == True: #sence 5 does not equal to true so it uses else
+    print("have 5 hamburgers")
+
+else:
+    print("here is some water")
+ #variable = True statement if (condition) else false statement   
+state = "hambergers" if hungry else "water"
+print(state)
+
+#data types
+print("hair_lolor: " + str(type(hair_color))) #brackets means funtion and you can use as meany as your computer can handle
+print("eye_clolr: " + str(type(eye_color)))
+print("name: " + str(type(name)))
+print("age: " + (type(age)))
+print("height:" + (type(height)))
+print(type(hungry))
+

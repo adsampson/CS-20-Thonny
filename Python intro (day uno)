@@ -26,7 +26,8 @@ print(state)
 print("hair_lolor: " + str(type(hair_color))) #brackets means funtion and you can use as meany as your computer can handle
 print("eye_clolr: " + str(type(eye_color)))
 print("name: " + str(type(name)))
-print("age: " + (type(age)))
-print("height:" + (type(height)))
-print(type(hungry))
+print("age: " + str(type(age)))
+print("height:" + str(type(height)))
+print("hungry: " + str(type(hungry)))
+
 

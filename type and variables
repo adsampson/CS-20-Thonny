@@ -1,0 +1,15 @@
+x = 4
+y = 10
+z = 3
+#** means to the power of
+#print(2*x-y/2-z-1+2)
+#print(z/x-y**2)
+
+sum_of_num = x//y
+diff_of_num = x-y-z
+
+#use type() and / or // find what happens if x/y and x//y
+#rounds the number down to the nearest whole number
+#print(sum_of_num)
+#print(diff_of_num)
+

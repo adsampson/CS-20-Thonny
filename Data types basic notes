@@ -1,0 +1,8 @@
+#key word is data type
+
+#Boolean is true(on, or a hole number) and false (0 or off)
+#Integer is an hole number that can be positive or negative (ob10 is an hole number i guess hex code)
+#Floats have decimals (or scientific notation counts)
+#Strings are words that are in " "
+#Comlex number are immaginary numbers
+#Function are print(), type(), str() they must have a () or things will not work

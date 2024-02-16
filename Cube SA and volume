@@ -1,0 +1,7 @@
+#solving a cube's volume and surfave area
+
+length = int (input("What is a side lebgth of the cube? "))
+volume = length*length*length
+surface_area = length*length*6
+print("The volume of the cube is " , volume)
+print("The surface area of the cube is " , surface_area)

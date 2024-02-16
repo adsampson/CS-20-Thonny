@@ -1,0 +1,14 @@
+#user profile variables
+your_name = input("What is your name? ")
+your_age = input("How old are you? ")
+your_height = input("How tall are you? (in cm) ")
+your_eye_color = input("What is your eye color? ")
+your_fav_color = input("What is your favorite color? ")
+
+#print data for user
+print("your name is " + your_name + ".")
+print("You are " + your_age + " years old.")
+print("You are " + your_height + "cm tall.")
+print("Your eye color is " + your_eye_color + ".")
+print("Yoyr favorite color is " + your_fav_color + ".")
+print("Is this data correct?")

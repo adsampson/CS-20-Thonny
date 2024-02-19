@@ -1,0 +1,7 @@
+#solving a sphere's volume and surfave area
+
+radius = int (input("What is the radius, in inches? "))
+volume = (4/3)*3.1415*radius**3
+surface_area = 4*3.1415*radius**2
+print("The volume of the sphere is " , volume , "inches cubed.")
+print("The surface area of the sphere is " , surface_area , "inches squared.")

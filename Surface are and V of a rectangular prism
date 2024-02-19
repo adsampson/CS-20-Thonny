@@ -1,2 +1,8 @@
 #suraface area of a rectangular prism
-long_side = input("What is the length of the long side?  ")
+short_side = int(input("What is the length, in inches, of the short side?  "))
+long_side = int(input("What is the length, in inches, of the long side? "))
+
+volume = (short_side*short_side)*long_side
+surface_area = (((short_side*short_side)*2)+((short_side*long_side)*4))
+print("The volume of the prism is" , volume , "inches cubed.")
+print("The surface area of the prism is" , surface_area , "inches squared.")

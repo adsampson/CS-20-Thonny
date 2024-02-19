@@ -1,0 +1,26 @@
+what_shape=input("Is this shape a cube, a rectangular prism or a sphere?")
+
+#solving a sphere's volume and surfave area
+if what_shape = sphere
+    radius = int (input("What is the radius, in inches? "))
+    volume = (4/3)*3.1415*radius**3
+    surface_area = 4*3.1415*radius**2
+    print("The volume of the sphere is " , volume , "inches cubed.")
+    print("The surface area of the sphere is " , surface_area , "inches squared.")
+
+#solving a cube's volume and surfave area
+else what_shape = cube
+    length = int (input("What is a side lebgth of the cube, in inches? "))
+    volume = length*length*length
+    surface_area = length*length*6
+    print("The volume of the cube is " , volume , "inches cubed")
+    print("The surface area of the cube is " , surface_area , "inches squared")
+
+#suraface area of a rectangular prism
+elif what_shape = rectangular prism
+    short_side = int(input("What is the length, in inches, of the short side?  "))
+    long_side = int(input("What is the length, in inches, of the long side? "))
+    volume = (short_side*short_side)*long_side
+    surface_area = (((short_side*short_side)*2)+((short_side*long_side)*4))
+    print("The volume of the prism is" , volume , "inches cubed.")
+    print("The surface area of the prism is" , surface_area , "inches squared.")

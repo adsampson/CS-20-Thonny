@@ -1,4 +1,6 @@
-what_shape=input("Is this shape a cube, a rectangular prism, a square pyramid or a sphere? ")
+import math
+print("Please use inches as the unit")
+what_shape=input("Is this shape a cube, a rectangular prism, a square pyramid, cylinder, dodecahedron or a sphere? ")
 
 #solving a sphere's volume and surfave area
 if what_shape == "sphere":
@@ -33,4 +35,19 @@ elif what_shape == "square pyramid":
     volume = (1/3)*(base**2)*height
     print("The volume of the pyramid is" , volume , "inches cubed")
     print("The surface area of the pyramid is" , surface_area , "inches squared")
-
+    
+elif what_shape == "cylinder":
+    radius = int(input("What is the radius of the circle? "))
+    height = int(input("What is the height of the cylinder? "))
+    circum = 2*3.14*radius
+    surface_area = (3.14*radius**2)+(height+circum)
+    volume = 3.14*radius**2*height
+    print("The volume of the cylinder is " , volume , "inches cubed.")
+    print("The surface area of the cylinder is " , surface_area ,"inches squared." )
+    
+elif what_shape == "dodecahedron":
+    side = int(input("What is the length of one side? "))
+    volume = (1/4)*(15+7*math.sqrt(5))*(side**3)
+    surface_area = 3*math.sqrt(25+10*math.sqrt(5))*side**2
+    print("The volume of the dodecahedron is " , volume , "inches cubed")
+    print("The surface area of the dodecahedron is " , surface_area , "inches squared")

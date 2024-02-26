@@ -1,0 +1,62 @@
+import math #this will import a necessary built in library
+print("Please use inches as the unit") #defines units
+what_shape = input("Is this shape a cube, a rectangular prism, a square pyramid, cylinder, dodecahedron or a sphere? ")
+
+#solving a sphere's volume and surfave area
+if what_shape == "sphere":
+    radius = int (input("What is the radius? "))
+    volume = round(((4/3)*3.1415*radius**3), 2) #calculates the volume then rounds it to 2 decimal places
+    surface_area = round((4*3.1415*radius**2) , 2) #calculates the surface area then rounds to 2 decimal places
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the sphere is " , volume , "inches cubed.")
+    print("The surface area of the sphere is " , surface_area , "inches squared.")
+
+#solving a cube's volume and surface area
+elif what_shape == "cube":
+    length = int (input("What is a side lebgth of the cube, in inches? "))
+    volume = (length*length*length)
+    surface_area = (length*length*6)
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the cube is " , volume , "inches cubed")
+    print("The surface area of the cube is " , surface_area , "inches squared")
+
+#suraface area of a rectangular prism
+elif what_shape == "rectangular prism":
+    short_side = int(input("What is the length, in inches, of the short side?  "))
+    long_side = int(input("What is the length, in inches, of the long side? "))
+    volume = ((short_side*short_side)*long_side)
+    surface_area = ((short_side*short_side)*2)+((short_side*long_side)*4)
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the prism is" , volume , "inches cubed.")
+    print("The surface area of the prism is" , surface_area , "inches squared.")
+
+#surface area and volume of a square pyramid   
+elif what_shape == "square pyramid":
+    base = int(input("What is the base length? "))
+    slant = int(input("What is the slant length? "))
+    height = int(input("What is the height of the pyramid? "))
+    surface_area = round((base**2)+(((1/2)*base*slant)*4) , 2) #calculates the surface area then rounds to 2 decimal places
+    volume = round(((1/3)*(base**2)*height) , 2) #calculates the volume then rounds it to 2 decimal places
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the pyramid is" , volume , "inches cubed")
+    print("The surface area of the pyramid is" , surface_area , "inches squared")
+
+# surface area and volume of a cylinder   
+elif what_shape == "cylinder":
+    radius = int(input("What is the radius of the circle? "))
+    height = int(input("What is the height of the cylinder? "))
+    circum = 2*3.14*radius
+    surface_area = round((3.14*radius**2)+(height+circum) , 2) #calculates the surface area then rounds to 2 decimal places
+    volume = ((3.14*radius**2*height) , 2) #calculates the volume then rounds it to 2 decimal places
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the cylinder is " , volume , "inches cubed.")
+    print("The surface area of the cylinder is " , surface_area ,"inches squared." )
+    
+#surface area and volume of a dodecahedron
+elif what_shape == "dodecahedron":
+    side = int(input("What is the length of one side? "))
+    volume = round(((1/4)*(15+7*math.sqrt(5))*(side**3)) ,2) #calculates the volume then rounds it to 2 decimal places
+    surface_area = round((3*math.sqrt(25+10*math.sqrt(5))*side**2) , 2) #calculates the surface area then rounds to 2 decimal places
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the dodecahedron is " , volume , "inches cubed")
+    print("The surface area of the dodecahedron is " , surface_area , "inches squared")

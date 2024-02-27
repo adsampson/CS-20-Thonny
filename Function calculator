@@ -1,0 +1,96 @@
+import math #this will import a necessary built in library
+
+def calc_sphere():
+    radius = int (input("What is the radius? "))
+    volume = round(((4/3)*3.1415*radius**3), 2) #calculates the volume then rounds it to 2 decimal places
+    surface_area = round((4*3.1415*radius**2) , 2) #calculates the surface area then rounds to 2 decimal places
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the sphere is " , volume , "inches cubed.")
+    print("The surface area of the sphere is " , surface_area , "inches squared.")
+
+def calc_cube():
+    length = int (input("What is a side length of the cube? "))
+    volume = (length*length*length)
+    surface_area = (length*length*6)
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the cube is " , volume , "inches cubed")
+    print("The surface area of the cube is " , surface_area , "inches squared")
+
+def calc_rec_prism():
+    short_side = int(input("What is the length of the short side?  "))
+    long_side = int(input("What is the length of the long side? "))
+    volume = ((short_side*short_side)*long_side)
+    surface_area = ((short_side*short_side)*2)+((short_side*long_side)*4)
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the prism is" , volume , "inches cubed.")
+    print("The surface area of the prism is" , surface_area , "inches squared.")
+    
+def calc_squ_pyramid():
+    base = int(input("What is the base length? "))
+    slant = int(input("What is the slant length? "))
+    height = int(input("What is the height of the pyramid? "))
+    surface_area = round((base**2)+(((1/2)*base*slant)*4) , 2) #calculates the surface area then rounds to 2 decimal places
+    volume = round(((1/3)*(base**2)*height) , 2) #calculates the volume then rounds it to 2 decimal places
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the pyramid is" , volume , "inches cubed")
+    print("The surface area of the pyramid is" , surface_area , "inches squared")
+    
+def calc_cylinder():
+    radius = int(input("What is the radius of the circle? "))
+    height = int(input("What is the height of the cylinder? "))
+    circum = 2*3.14*radius
+    surface_area = round((3.14*radius**2)+(height+circum) , 2) #calculates the surface area then rounds to 2 decimal places
+    volume = ((3.14*radius**2*height) , 2) #calculates the volume then rounds it to 2 decimal places
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the cylinder is " , volume , "inches cubed.")
+    print("The surface area of the cylinder is " , surface_area ,"inches squared." )
+
+def Calc_dodec():
+    side = int(input("What is the length of one side? "))
+    volume = round(((1/4)*(15+7*math.sqrt(5))*(side**3)) ,2) #calculates the volume then rounds it to 2 decimal places
+    surface_area = round((3*math.sqrt(25+10*math.sqrt(5))*side**2) , 2) #calculates the surface area then rounds to 2 decimal places
+    #print the final numbers with text to make the numbers make sence
+    print("The volume of the dodecahedron is " , volume , "inches cubed")
+    print("The surface area of the dodecahedron is " , surface_area , "inches squared")
+    
+def what_shape():
+    return input("Is this shape a cube, a rectangular prism, a square pyramid, cylinder, dodecahedron or a sphere? ")
+
+#Intro
+print("Welcome to the shape calculator 1.2 edition! If you wish to quit please enter exit.")
+print("Please use inches as the unit") #defines units
+
+
+#solving a sphere's volume and surfave area
+while True:
+    what_shape = what_shape() #this connects the funtion to the input
+    if what_shape == "sphere" or what_shape == "Sphere": #this allows for diffrent capitalization
+        calc_sphere()
+
+#solving a cube's volume and surface area
+    elif what_shape == "cube": #this allows for diffrent capitalization
+        calc_cube()
+
+#suraface area of a rectangular prism
+    elif what_shape == "rectangular prism" or what_shape == "Rectangulat prism" or what_shape == "Rectangular Prism": #this allows for diffrent capitalization
+        calc_rec_prism()
+
+#surface area and volume of a square pyramid   
+    elif what_shape == "square pyramid" or what_shape == "Square pyramid" or what_shape == "Square Pyranid": #this allows for diffrent capitalization
+        calc_squ_pyramid()
+
+# surface area and volume of a cylinder   
+    elif what_shape == "cylinder" or what_shape == "Cylinder": #this allows for diffrent capitalization
+        calc_cylinder()
+    
+#surface area and volume of a dodecahedron
+    elif what_shape == "dodecahedron" or what_shape == "Dodecahedron":  #this allows for diffrent capitalization
+        calc_dodec()
+    
+    elif what_shape == "exit":
+        exit()
+#This should be ran at the end to see if they want to do another shape    
+    else:
+        cont = input("Do you wish to continue? YES or NO ")
+        if cont == "NO":
+            exit()

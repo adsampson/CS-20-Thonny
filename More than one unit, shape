@@ -3,41 +3,115 @@ import math #this will import a necessary built in library
 
 what_unit = input("What units do you want to use, centimeters, meters, or inches? ")
 
-if what_unit == "centimeters" or what_unit == "Centimeters":
+if what_unit.lower() == "centimeters":
     what_shape = input("What shape is this, a cube, rectangular prism or a shere? ")
-    if what_shape == "cube".upper():
+    if what_shape.lower() == "cube":
         sa_v = input("Do you want volume, surface area, or both ? ")
-        if sa_v  == "volume" or sa_v == "Volume":
+        if sa_v.lower()  == "volume":
             length = int (input("What is a side lebgth of the cube ? "))
             volume = length**3
             print("The volume of the cube is " , volume , "centimeters cubed.")
-        elif sa_v == "surface area" or sa_v == "Surface area" or sa_v == "surface Area":
+        elif sa_v.lower() == "surface area":
             length = int (input("What is a side lebgth of the cube ? "))
             surface_area = (lenght**2)*6
             print("the surface area of the cube is " , surface_area , "centimeters squared")
-        elif sa_v == "both" or sa_v == "Both":
+        elif sa_v.lower() == "both":
             length = int (input("What is a side lebgth of the cube ? "))
             surface_area = (length**2)*6
             volume = length**3
             print("The volume of the cube is " , volume , "centimeters cubed.")
             print("the surface area of the cube is " , surface_area , "centimeters squared")
     
-    elif what_shape == "rectangular prism".upper():
+    elif what_shape.lower() == "rectangular prism":
         sa_v = input("Do you want volume, surface area, or both ? ")
-        if sa_v  == "volume".upper():
+        if sa_v.lower()  == "volume":
             short_side = int (input("What is the length of the short side? "))
             long_side = int (input("What is the length of the long side? "))
             volume = (short_side**2)*long_side
             print("The volume of the rectangular prism is " , volume , "centimeters cubed.")
-        elif sa_v == "surface area".upper():
+        elif sa_v.lower() == "surface area":
             short_side = int (input("What is the length of the short side? "))
             long_side = int (input("What is the length of the long side? "))
             surface_area = ((short_side**2)*2)+((long_side*short_side)*4)
             print("the surface area of the rectangular prism is " , surface_area , "centimeters squared")
-        elif sa_v == "both".upper():
+        elif sa_v.lower() == "both":
             short_side = int (input("What is the length of the short side? "))
             long_side = int (input("What is the length of the long side? "))
             surface_area = ((short_side**2)*2)+((long_side*short_side)*4)
             volume = (long_side*short_side*short_side)
             print("The volume of the rectangular prism is " , volume , "centimeters cubed.")
             print("the surface area of the rectangular prism is " , surface_area , "centimeters squared.")
+            
+    elif what_shape.lower() == "sphere":
+        sa_v = input("Do you want volume, surface area, or both ? ")
+        if sa_v.lower()  == "volume":
+            radius = int (input("What is the radius? "))
+            volume = round((4/3)*3.1415*radius**3)
+            print("The volume of the sphere " , volume , "centimeters cubed.")
+        elif sa_v.lower() == "surface area":
+            radius = int (input("What is the radius? "))
+            surface_area = 4*3.1415*radius**2
+            print("the surface area of sphere is " , surface_area , "centimeters squared")
+        elif sa_v.lower() == "both":
+            radius = int (input("What is the radius? "))
+            surface_area = round((4*3.1415*radius**2) , 2)
+            volume = round(((4/3)*3.1415*radius**3) , 2)
+            print("The volume of the sphere is " , volume , "centimeters cubed.")
+            print("the surface area of the sphere is " , surface_area , "centimeters squared.")
+            
+            
+elif what_unit.lower() == "inches":
+    what_shape = input("What shape is this, a cube, rectangular prism or a shere? ")
+    if what_shape.lower() == "cube":
+        sa_v = input("Do you want volume, surface area, or both ? ")
+        if sa_v.lower()  == "volume":
+            length = int (input("What is a side lebgth of the cube ? "))
+            volume = length**3
+            print("The volume of the cube is " , volume , "centimeters cubed.")
+        elif sa_v.lower() == "surface area":
+            length = int (input("What is a side lebgth of the cube ? "))
+            surface_area = (lenght**2)*6
+            print("the surface area of the cube is " , surface_area , "centimeters squared")
+        elif sa_v.lower() == "both":
+            length = int (input("What is a side lebgth of the cube ? "))
+            surface_area = (length**2)*6
+            volume = length**3
+            print("The volume of the cube is " , volume , "centimeters cubed.")
+            print("the surface area of the cube is " , surface_area , "centimeters squared")
+    
+    elif what_shape.lower() == "rectangular prism":
+        sa_v = input("Do you want volume, surface area, or both ? ")
+        if sa_v.lower()  == "volume":
+            short_side = int (input("What is the length of the short side? "))
+            long_side = int (input("What is the length of the long side? "))
+            volume = (short_side**2)*long_side
+            print("The volume of the rectangular prism is " , volume , "centimeters cubed.")
+        elif sa_v.lower() == "surface area":
+            short_side = int (input("What is the length of the short side? "))
+            long_side = int (input("What is the length of the long side? "))
+            surface_area = ((short_side**2)*2)+((long_side*short_side)*4)
+            print("the surface area of the rectangular prism is " , surface_area , "centimeters squared")
+        elif sa_v.lower() == "both":
+            short_side = int (input("What is the length of the short side? "))
+            long_side = int (input("What is the length of the long side? "))
+            surface_area = ((short_side**2)*2)+((long_side*short_side)*4)
+            volume = (long_side*short_side*short_side)
+            print("The volume of the rectangular prism is " , volume , "centimeters cubed.")
+            print("the surface area of the rectangular prism is " , surface_area , "centimeters squared.")
+            
+    elif what_shape.lower() == "sphere":
+        sa_v = input("Do you want volume, surface area, or both ? ")
+        if sa_v.lower()  == "volume":
+            radius = int (input("What is the radius? "))
+            volume = round((4/3)*3.1415*radius**3)
+            print("The volume of the sphere " , volume , "centimeters cubed.")
+        elif sa_v.lower() == "surface area":
+            radius = int (input("What is the radius? "))
+            surface_area = 4*3.1415*radius**2
+            print("the surface area of sphere is " , surface_area , "centimeters squared")
+        elif sa_v.lower() == "both":
+            radius = int (input("What is the radius? "))
+            surface_area = round((4*3.1415*radius**2) , 2)
+            volume = round(((4/3)*3.1415*radius**3) , 2)
+            print("The volume of the sphere is " , volume , "centimeters cubed.")
+            print("the surface area of the sphere is " , surface_area , "centimeters squared.")

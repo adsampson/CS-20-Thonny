@@ -1,0 +1,9 @@
+##Basic lists
+
+breakfast_items = ["apple","oranges","bakeapples","grapes","pineapple_on_pizzas"]
+print(breakfast_items)#print all list
+print(breakfast_items[1])#print oranges
+print(breakfast_items[3])#print grapes
+#loop through all list and print each
+for x in breakfast_items:
+    print(x)

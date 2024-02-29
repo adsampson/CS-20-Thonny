@@ -13,7 +13,7 @@ def cycle_state():
     if run_cycle:
         print("The dishwasher is running.")
     else:
-        print("The dishwasher is not running, the dishes are clean, or mostly clean.")
+        print("The dishwasher is not running, the dishes are 'clean'.")
 #Loops return toggle state 60 time befor exiting       
 for x in range(1,61):
     print("Current loop: " , x)

@@ -1,0 +1,24 @@
+#############
+#Basic toggles and for loops
+#A Sampson
+#feb 29 2024
+#This line is for summery
+#############
+
+#Basic format for toggle switcyh and for loop
+run_cycle = True
+
+#funtion returns stoggle state to shell
+def cycle_state():
+    if run_cycle:
+        print("The dishwasher is running.")
+    else:
+        print("The dishwasher is not running, the dishes are clean, or mostly clean.")
+#Loops return toggle state 60 time befor exiting       
+for x in range(1,61):
+    print("Current loop: " , x)
+    cycle_state()
+#Boolean toggle switch of current state
+run_cycle = not run_cycle
+#Final state for cycle state
+cycle_state()

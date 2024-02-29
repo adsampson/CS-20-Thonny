@@ -1,0 +1,24 @@
+#############
+#Basic toggles and for loops
+#A Sampson
+#feb 29 2024
+#This line is for summery
+#############
+
+#Basic format for toggle switcyh and for loop
+toggle = True
+
+#funtion returns stoggle state to shell
+def toggle_state():
+    if toggle:
+        print("Toggle is True")
+    else:
+        print("Toggle is Fasle")
+#Loops return toggle state 60 time befor exiting       
+for x in range(1,60):
+    print("Current loop: " , x)
+    toggle_state()
+#Boolean toggle switch of current state
+toggle = not toggle
+#Final state for toggle state
+toggle_state()

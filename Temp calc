@@ -1,0 +1,13 @@
+####################
+#Temp tonversion Mean, min/max calculator  
+#A sampson
+#March 1 2024
+#
+#take 7 temp readings from the user in C, F or K and report back the average for the week and the min and mx values for the week in C, K, F
+####################
+
+unit = input("Do you know the tamperatures in celsius, ferinheight or kalvin? ")
+if unit.lower() =="celsius" or unit.lower() == "c":
+    temp = input.sort()("What was the temperatures for the week? ")
+    print(temp)
+    

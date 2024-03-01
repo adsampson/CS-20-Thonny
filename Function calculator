@@ -87,10 +87,10 @@ while True:
     elif what_shape == "dodecahedron" or what_shape == "Dodecahedron":  #this allows for diffrent capitalization
         calc_dodec()
     
-    elif what_shape == "exit":
+    elif what_shape.lower() == "exit":
         exit()
 #This should be ran at the end to see if they want to do another shape    
     else:
         cont = input("Do you wish to continue? YES or NO ")
-        if cont == "NO":
+        if cont.lower() == "no":
             exit()

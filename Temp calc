@@ -1,38 +1,39 @@
 def record_temp():
     daily_temp = int(input("What is the current tempurature? "))
     daily_unit = input("What is the current unit for the temperature? ")
-    temp_conversion(daily_temp, daily_unit)
+    temp_conversion(daily_temp, daily_unit)#this passes the funtion on so they can be used
 
 def c_to_other(daily_temp):
+    temp_c = daily_temp
     temp_f = round(((daily_temp*(9/5))+32) , 3)
     temp_k = round((daily_temp+273.15), 3)
-    print(temp_f)
-    print(temp_k)
+    report_temp(temp_k,temp_c,temp_f)
 
 def f_to_other(daily_temp):
+    temp_f = daily_temp
     temp_c = round((daily_temp-32)*(5/9) , 3)
     temp_k = round(((((daily_temp-32)*5)/5)+273.15) , 3)
-    print("The temperature in celsius is " , temp_c)
-    print("The temerature in kalvin is " , temp_k)
+    report_temp(temp_k,temp_c,temp_f)
     
 def k_to_other(daily_temp):
+    temp_k = daily_temp
+    temp_f = round(((((temp_k-273.15)*9)/5)+32), 3)
+    temp_c = round((temp_k-273.15) , 3)
+    report_temp(temp_k,temp_c,temp_f)
 
-def temp_conversion(daily_temp, daily_unit):
+def report_temp(temp_k,temp_c,temp_f):
+    print("The temperature in Calsius is " , temp_c,"degrees")
+    print("The temperature in Ferinheight is ",temp_f,"degrees")
+    print("The temperature in Kalvin is ",temp_k,"degrees")
+    
+def temp_conversion(daily_temp , daily_unit):
     if daily_unit.lower() == "c":
         c_to_other(daily_temp)
     elif daily_unit.lower() == "f":
         f_to_other(daily_temp)
-
-print("Welcome to the temperature calculator. Here you can use celsius, ferinheight or kalvin.")
-record_temp()
-
-def temp_conversion(daily_temp, daily_unit):
-    if daily_unit.lower() == "c":
-        temp_f = (daily_temp*(9/5))+32
-        temp_k = (daily_temp+273.15)
-        print(temp_f)
-        print(temp_k)
-        
-    elif daily_unit.lower() == "f":
-        f_to_other()        
-
+    elif daily_unit.lower() == "k":
+        k_to_other(daily_temp)
+    
+print("Welcome to the temperature calculator. Here you can use celsius, ferinheight or kalvin (please use C, F or K).")
+for x in range(0,7):
+    record_temp()

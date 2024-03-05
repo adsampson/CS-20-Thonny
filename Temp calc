@@ -1,13 +1,38 @@
-####################
-#Temp tonversion Mean, min/max calculator  
-#A sampson
-#March 1 2024
-#
-#take 7 temp readings from the user in C, F or K and report back the average for the week and the min and mx values for the week in C, K, F
-####################
+def record_temp():
+    daily_temp = int(input("What is the current tempurature? "))
+    daily_unit = input("What is the current unit for the temperature? ")
+    temp_conversion(daily_temp, daily_unit)
 
-unit = input("Do you know the tamperatures in celsius, ferinheight or kalvin? ")
-if unit.lower() =="celsius" or unit.lower() == "c":
-    temp = input.sort()("What was the temperatures for the week? ")
-    print(temp)
+def c_to_other(daily_temp):
+    temp_f = round(((daily_temp*(9/5))+32) , 3)
+    temp_k = round((daily_temp+273.15), 3)
+    print(temp_f)
+    print(temp_k)
+
+def f_to_other(daily_temp):
+    temp_c = round((daily_temp-32)*(5/9) , 3)
+    temp_k = round(((((daily_temp-32)*5)/5)+273.15) , 3)
+    print("The temperature in celsius is " , temp_c)
+    print("The temerature in kalvin is " , temp_k)
     
+def k_to_other(daily_temp):
+
+def temp_conversion(daily_temp, daily_unit):
+    if daily_unit.lower() == "c":
+        c_to_other(daily_temp)
+    elif daily_unit.lower() == "f":
+        f_to_other(daily_temp)
+
+print("Welcome to the temperature calculator. Here you can use celsius, ferinheight or kalvin.")
+record_temp()
+
+def temp_conversion(daily_temp, daily_unit):
+    if daily_unit.lower() == "c":
+        temp_f = (daily_temp*(9/5))+32
+        temp_k = (daily_temp+273.15)
+        print(temp_f)
+        print(temp_k)
+        
+    elif daily_unit.lower() == "f":
+        f_to_other()        
+

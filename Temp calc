@@ -7,24 +7,20 @@ def c_to_other(daily_temp):
     temp_c = daily_temp
     temp_f = round(((daily_temp*(9/5))+32) , 3)
     temp_k = round((daily_temp+273.15), 3)
-    report_temp(temp_k,temp_c,temp_f)
-
+    temps_day = [temp_c, temp_f, temp_k]
+    
 def f_to_other(daily_temp):
     temp_f = daily_temp
     temp_c = round((daily_temp-32)*(5/9) , 3)
     temp_k = round(((((daily_temp-32)*5)/5)+273.15) , 3)
-    report_temp(temp_k,temp_c,temp_f)
     
 def k_to_other(daily_temp):
     temp_k = daily_temp
     temp_f = round(((((temp_k-273.15)*9)/5)+32), 3)
     temp_c = round((temp_k-273.15) , 3)
-    report_temp(temp_k,temp_c,temp_f)
 
 def report_temp(temp_k,temp_c,temp_f):
-    print("The temperature in Calsius is " , temp_c,"degrees")
-    print("The temperature in Ferinheight is ",temp_f,"degrees")
-    print("The temperature in Kalvin is ",temp_k,"degrees")
+    
     
 def temp_conversion(daily_temp , daily_unit):
     if daily_unit.lower() == "c":
@@ -34,6 +30,20 @@ def temp_conversion(daily_temp , daily_unit):
     elif daily_unit.lower() == "k":
         k_to_other(daily_temp)
     
-print("Welcome to the temperature calculator. Here you can use celsius, ferinheight or kalvin (please use C, F or K).")
-for x in range(0,7):
+#print("Welcome to the temperature calculator. Here you can use celsius, ferinheight or kalvin (please use C, F or K).")
+    
+#Next Thing is to colect temp for all week
+temp_day = [0,0,0]#C,F,K. in order
+temp_week_c = [0,0,0,0,0,0,0]
+temp_week_f = [0,0,0,0,0,0,0]
+temp_week_k = [0,0,0,0,0,0,0]
+
+for x in range(7):
     record_temp()
+    temp_week_c[x] = tem_day[0]
+    temp_week_c[x] = tem_day[1]
+    temp_week_c[x] = tem_day[2]
+
+#Then calculate averages
+    
+#Then MIN/MAX

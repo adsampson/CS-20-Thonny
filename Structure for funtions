@@ -1,0 +1,26 @@
+from library import turn_right, turn_around
+#basic funtion apraoch completes a task    
+#def go_to_goal():
+    #repeat 6:
+        #move()
+#go_to_goal()
+
+#Data input aproach it comletes a task based on input
+#of variable data
+#def go_to_goal(distance,speed):
+    #think(speed)
+    #for x in range(distance):
+        #move()
+#go_to_goal(6,0)
+
+#Return aproach
+#does a task then returns data out of the funtion
+#def steps_to_take():
+    #return 6
+
+#def go_to_goal(distance):
+    #for x in range(distance):
+        #move()
+        
+#steps = steps_to_take()
+#go_to_goal(steps)

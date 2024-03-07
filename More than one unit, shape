@@ -8,9 +8,9 @@ if what_unit.lower() == "centimeters":
     if what_shape.lower() == "cube":
         sa_v = input("Do you want volume, surface area, or both? ")
         if sa_v.lower()  == "volume":
-            length = int (input("What is a side length of the cube? "))
+            length = int(input("What is a side length of the cube? "))
             volume = length**3
-            print("The volume of the cube is " , volume , "centimeters cubed.")
+            print(f"The volume of the cube is {volume} centimeters cubed.")
         elif sa_v.lower() == "surface area":
             length = int(input("What is a side length of the cube? "))
             surface_area = (lenght*legnth)*6
@@ -26,7 +26,7 @@ if what_unit.lower() == "centimeters":
         sa_v = input("Do you want volume, surface area, or both? ")
         if sa_v.lower()  == "volume":
             short_side = int (input("What is the length of the short side? "))
-            long_side = int (input("What is the length of the long side? "))
+            long_side = int(input("What is the length of the long side? "))
             volume = (short_side**2)*long_side
             print("The volume of the rectangular prism is " , volume , "centimeters cubed.")
         elif sa_v.lower() == "surface area":

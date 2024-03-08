@@ -1,0 +1,6 @@
+#list of temps in the week
+tempOWeek = [0,0,0,0,0,0,0]
+
+#asks for each days temperature
+for x in range(7):
+    tempOWeek[x] = float(input(f"What was the temperature on {DayOWeek[x]}?"))

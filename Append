@@ -1,0 +1,8 @@
+drinks = ["Ice Tea" , "cofee" , "coke"]
+for drink in drinks:
+    print(drink)
+    
+drinks.append("tea")
+
+for drink in drinks:
+    print(drink)

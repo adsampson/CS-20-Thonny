@@ -1,0 +1,57 @@
+import easygui as easy
+###############################
+#MadLib assignment
+#Alexander Sampson
+#March 12 2024
+#
+#focus: easyGUI, F-string formatting, lists
+#
+#step 1: Create a pimple madlib that takes info from user to create a short responce (10-15)
+#Step 2: Create a madlib, which asks for multipul values from the user, and uses ransom input to create the final responce.
+###############################
+name_msg = "Enter name"
+name = easy.enterbox(name_msg)
+
+night_job_msg = "Enter a job"
+night_job = easy.enterbox(night_job_msg)
+
+freind_msg = "Enter another name"
+freind = easy.enterbox(freind_msg)
+
+verb_meg = "Enter a verb"
+verb = easy.enterbox(verb_msg)
+
+scientist_job_msg = "Enter another name"
+scientist_job = easy.enterbox(scientist_msg)
+
+color_msg = "Enter a color"
+color = easy.enterbox(color_msg)
+
+city_msg = "Enter the name of a city or state/provinse"
+city = easy.enterbox(city_msg)
+
+fav_thing = "Enter a verb"
+fav_thing = easy.enterbox(fav_thing_msg)
+
+fav_thing_2 = "Enter a verb"
+fav_thing = easy.enterbox(fav_thing_msg)
+
+fav_thing = "Enter a verb"
+fav_thing.enterbox(fav_thing_msg)
+
+scientist_job_msg = "Enter another name"
+scientist_job = easy.enterbox(scientist_msg)
+
+color_msg = "Enter a color"
+color = easy.enterbox(color_msg)
+
+
+
+#story = f"Hi! My name is {name} and I have a secret to share with you. I am a normal kid by day and a {night_job} by night. Only you and my best"\
+# f"freind {freind} knows my secret. You may be wondering how this happened? Well one night I was {verb} at home hen BOOM! All the lights whent out and"\
+# f"{scientist} showed up. In a booming he/she voice said that because my my favorite color is {color} you have been chozen to be a {job}. My mission is to"\
+# f"save the people of {city} by doing my favorite things {fav_thing}, {fav_thing_2} and {fav_thing_3}. That may sound easy but it is no walk in the park."\
+# f"It is hard work and {sweat_related_thing}. My weakness is eating {no_food}. They are gross! :( Keep that it away fro me! I save the world every night "\
+# f"but when I wake up at {time in morning} I pretend to be a regular kid at {school}."
+# 
+print(story)

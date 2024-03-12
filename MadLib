@@ -9,20 +9,23 @@ import easygui as easy
 #step 1: Create a pimple madlib that takes info from user to create a short responce (10-15)
 #Step 2: Create a madlib, which asks for multipul values from the user, and uses ransom input to create the final responce.
 ###############################
+intro.msg = "welcome to the MadLibs python thing> I will ask you Questions and your answers will be put into a srory. For best result use obscure words."
+intro = easy.msgbox(intro.msg)
+
 name_msg = "Enter name"
 name = easy.enterbox(name_msg)
 
 night_job_msg = "Enter a job"
 night_job = easy.enterbox(night_job_msg)
 
-freind_msg = "Enter another name"
+freind_msg = "Enter a diffrent name"
 freind = easy.enterbox(freind_msg)
 
-verb_meg = "Enter a verb"
+verb_msg = "Enter a '-ing' verb"
 verb = easy.enterbox(verb_msg)
 
 scientist_job_msg = "Enter another name"
-scientist_job = easy.enterbox(scientist_msg)
+scientist_job = easy.enterbox(scientist_job_msg)
 
 color_msg = "Enter a color"
 color = easy.enterbox(color_msg)
@@ -30,28 +33,29 @@ color = easy.enterbox(color_msg)
 city_msg = "Enter the name of a city or state/provinse"
 city = easy.enterbox(city_msg)
 
-fav_thing = "Enter a verb"
+fav_thing_msg = "Enter a '-ing' verb"
 fav_thing = easy.enterbox(fav_thing_msg)
 
-fav_thing_2 = "Enter a verb"
-fav_thing = easy.enterbox(fav_thing_msg)
+fav_thing_2_msg = "Enter another '-ing' verb"
+fav_thing_2 = easy.enterbox(fav_thing_2_msg)
 
-fav_thing = "Enter a verb"
-fav_thing.enterbox(fav_thing_msg)
+fav_thing_3_msg = "Enter a third '-ing' verb"
+fav_thing_3 = easy.enterbox(fav_thing_3_msg)
 
-scientist_job_msg = "Enter another name"
-scientist_job = easy.enterbox(scientist_msg)
+no_food_msg = "Enter a food"
+no_food = easy.enterbox(no_food_msg)
 
-color_msg = "Enter a color"
-color = easy.enterbox(color_msg)
+time_in_morning_msg = "What time do you wake up?"
+time_in_morning = easy.enterbox(time_in_morning_msg)
 
+school_msg = "where do you go to school?"
+school = easy.enterbox(school_msg)
 
+story = f"Hi! My name is {name} and I have a secret to share with you. I am a normal kid by day and a {night_job} by night. Only you and my best"\
+f"freind {freind} know my secret. You may be wondering how this happened? Well one night I was {verb} at home then BOOM! All the lights whent out and"\
+f" {scientist_job} showed up. In a booming he/she voice said that because my my favorite color is {color} I was chozen to be a {night_job}. "\
+f"My mission is to save the people of {city} by doing my favorite things {fav_thing}, {fav_thing_2} and {fav_thing_3}. That may sound easy but it"\
+f" this no walk in the park. It is hard work. My weakness is eating {no_food}. They are gross! :( Keep that it away from me! I save the world"\
+f" every night but when I wake up at {time_in_morning} I pretend to be a regular kid at {school}."
 
-#story = f"Hi! My name is {name} and I have a secret to share with you. I am a normal kid by day and a {night_job} by night. Only you and my best"\
-# f"freind {freind} knows my secret. You may be wondering how this happened? Well one night I was {verb} at home hen BOOM! All the lights whent out and"\
-# f"{scientist} showed up. In a booming he/she voice said that because my my favorite color is {color} you have been chozen to be a {job}. My mission is to"\
-# f"save the people of {city} by doing my favorite things {fav_thing}, {fav_thing_2} and {fav_thing_3}. That may sound easy but it is no walk in the park."\
-# f"It is hard work and {sweat_related_thing}. My weakness is eating {no_food}. They are gross! :( Keep that it away fro me! I save the world every night "\
-# f"but when I wake up at {time in morning} I pretend to be a regular kid at {school}."
-# 
-print(story)
+easy.msgbox(story)

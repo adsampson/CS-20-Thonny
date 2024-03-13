@@ -9,40 +9,39 @@ import easygui as easy
 #step 1: Create a pimple MadLib that takes info from user to create a short responce (10-15)
 #Step 2: Create a MadLib, which asks for multiple values from the user, and uses ransom input to create the final responce.
 ###############################
+verbs = []
+names = []
+
+def Verb():
+    Verb_msg = "Enter a '-ing' verb"
+    title = 'the secrets out'
+    pet = easy.enterbox(Verb_msg, title)
+    verbs.append(pet)
+    
+def Names():
+    Name_msg = "Enter a name"
+    title = 'the secrets out'
+    cat = easy.enterbox(Name_msg, title)
+    names.append(cat)
 
 intro_msg = "Welcome to the MadLibs python program. This story is called 'the secrets out'. "\
 "I will ask you Questions and your answers will be put into a srory. For best result use obscure thing."
 intro = easy.msgbox(intro_msg)
 
-name_msg = "Enter a name"
-name = easy.enterbox(name_msg,"The secrets out")
+for x in range(3):
+    Names()
 
 night_job_msg = "Enter a job"
 night_job = easy.enterbox(night_job_msg,"The secrets out")
 
-freind_msg = "Enter a diffrent name"
-freind = easy.enterbox(freind_msg,"The secrets out")
-
-verb_msg = "Enter a '-ing' verb"
-verb = easy.enterbox(verb_msg,"The secrets out")
-
-scientist_job_msg = "Enter a third name"
-scientist_job = easy.enterbox(scientist_job_msg,"The secrets out")
+for x in range(4):
+    Verb()
 
 color_msg = "Enter a color"
 color = easy.enterbox(color_msg,"The secrets out")
 
 city_msg = "Enter the name of a city or state/provinse"
 city = easy.enterbox(city_msg,"The secrets out")
-
-fav_thing_msg = "Enter a '-ing' verb"
-fav_thing = easy.enterbox(fav_thing_msg,"The secrets out")
-
-fav_thing_2_msg = "Enter another '-ing' verb"
-fav_thing_2 = easy.enterbox(fav_thing_2_msg,"The secrets out")
-
-fav_thing_3_msg = "Enter a third '-ing' verb"
-fav_thing_3 = easy.enterbox(fav_thing_3_msg,"The secrets out")
 
 no_food_msg = "Enter a food"
 no_food = easy.enterbox(no_food_msg)
@@ -53,13 +52,18 @@ time_in_morning = easy.enterbox(time_in_morning_msg,"The secrets out")
 school_msg = "where do you go to school?"
 school = easy.enterbox(school_msg,"The secrets out")
 
-story = f"Hi! My name is {name} and I have a secret to share with you. I am a normal kid by day and a {night_job} by night. Only you and my best"\
-f"friend {freind} know my secret. You may be wondering how this happened? Well one night I was {verb} at home then BOOM! All the lights whent out and"\
-f" {scientist_job} showed up. In a booming voice he/she said that because my favorite color is {color} I was chosen to be a {night_job}. "\
-f"My mission is to save the people of {city} by doing my favorite things {fav_thing}, {fav_thing_2} and {fav_thing_3}. That may sound easy but it"\
+story = f"Hi! My name is {names[0]} and I have a secret to share with you. I am a normal kid by day and a {night_job} by night. Only you and my best"\
+f"friend {names[1]} know my secret. You may be wondering how this happened? Well one night I was {verbs[0]} at home then BOOM! All the lights whent out and"\
+f" {names[2]} showed up. In a booming voice he/she said that because my favorite color is {color} I was chosen to be a {night_job}. "\
+f"My mission is to save the people of {city} by doing my favorite things {verbs[1]}, {verbs[2]} and {verbs[3]}. That may sound easy but it"\
 f" is no walk in the park. It is hard work. My weakness is eating {no_food}. They are gross! :( Keep it away from me! I save the world"\
 f" every night but when I wake up at {time_in_morning} I pretend to be a regular kid at {school}."
 
-# easy.msgbox(story)
-# repeat_msg = "Do you wish to do it again? "
-# repeat = easy.choicebox(repeat_msg, "The sectrets out","Yes","No")
+easy.msgbox(story)
+repeat_msg = "Do you wish to do it again? "
+quit_no = ["yes","No"]
+repeat = easy.choicebox(repeat_msg,"The Secrets out",quit_no)
+if repeat == "yes":
+    quit(0)
+else:
+    quit(0)

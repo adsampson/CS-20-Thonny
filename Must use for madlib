@@ -1,0 +1,13 @@
+import easygui as easy
+
+owners = ["Bob","Joe","Jason","Valery"]
+pets = []
+
+def lis_relationships():
+    owners_count = len(owners)
+    for x in range (owners_count):
+        msg = f"What pet do you own?"
+        title = owners[x]
+        pet = easy.enterbox(msg,title)
+        pets.append(pet)
+        

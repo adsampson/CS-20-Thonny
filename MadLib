@@ -6,8 +6,8 @@ import easygui as easy
 #
 #focus: easyGUI, F-string formatting, lists
 #
-#step 1: Create a pimple madlib that takes info from user to create a short responce (10-15)
-#Step 2: Create a madlib, which asks for multiple values from the user, and uses ransom input to create the final responce.
+#step 1: Create a pimple MadLib that takes info from user to create a short responce (10-15)
+#Step 2: Create a MadLib, which asks for multiple values from the user, and uses ransom input to create the final responce.
 ###############################
 
 intro_msg = "Welcome to the MadLibs python program. This story is called 'the secrets out'. "\
@@ -60,6 +60,6 @@ f"My mission is to save the people of {city} by doing my favorite things {fav_th
 f" is no walk in the park. It is hard work. My weakness is eating {no_food}. They are gross! :( Keep it away from me! I save the world"\
 f" every night but when I wake up at {time_in_morning} I pretend to be a regular kid at {school}."
 
-easy.msgbox(story)
-# repeat_msg = "Do you wixh to do it again? "
+# easy.msgbox(story)
+# repeat_msg = "Do you wish to do it again? "
 # repeat = easy.choicebox(repeat_msg, "The sectrets out","Yes","No")

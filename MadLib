@@ -13,11 +13,12 @@ import easygui as easy
 questions = ["Enter a Name","Enter a Name","Enter a Name","Enter a Job","Enter a '-ing' Verb","Enter a '-ing' Verb","Enter a '-ing' Verb","Enter a '-ing' Verb","Enter a Color","Enter a City","Enter a Food","Enter a Time","Enter a School Name"]
 answers = []
 
-def Q_a():
+def user_answer():
+    answers.clear()
     questions_count = len(questions)
     for x in range (questions_count):
         msg = f"{questions[x]}?"
-        title = questions[x]
+        title = 'the secrets out'
         pet = easy.enterbox(msg,title)
         answers.append(pet)
     
@@ -35,16 +36,16 @@ def repeat():
     quit_no = ["yes","No"]
     repeat = easy.choicebox(repeat_msg,"The Secrets out",quit_no)
     if repeat == "yes":
-        Q_a()
+        user_answer()
         story()
     else:
         quit(0)
 
 intro_msg = "Welcome to the MadLibs python program. This story is called 'the secrets out'. "\
 "I will ask you Questions and your answers will be put into a srory. For best result use obscure thing."
-intro = easy.msgbox(intro_msg)
+intro = easy.msgbox(intro_msg,'the secrets out')
 
-Q_a()
+user_answer()
 
 story()
 

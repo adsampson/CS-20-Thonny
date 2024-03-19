@@ -1,13 +1,21 @@
+days_of_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "saturday"]
+week_temp_c = []
+week_temp_f = []
+week_temp_k = []
+
 def record_temp():
-    daily_temp = int(input("What is the current tempurature? "))
-    daily_unit = input("What is the current unit for the temperature? ")
-    temp_conversion(daily_temp, daily_unit)#this passes the funtion on so they can be used
+    question_qount = len(days_of_week)
+    for x in range (question_qount):
+        daily_temp = int(input(f"What's the tempurature on {days_of_week[x]}? "))
+        daily_unit = input("What is the unit for the temperature? ")
+        temp_conversion(daily_temp, daily_unit)#this passes the funtion on so they can be used
 
 def c_to_other(daily_temp):
     temp_c = daily_temp
     temp_f = round(((daily_temp*(9/5))+32) , 3)
     temp_k = round((daily_temp+273.15), 3)
     return (temp_k, temp_c, temp_f)
+    
 
 def f_to_other(daily_temp):
     temp_f = daily_temp
@@ -38,9 +46,17 @@ def report_temp(cur_temp):
     print(f"The temperature in Celsius is {cur_temp[1]} degrees.")
     print(f"The temperature in Ferinhight is {cur_temp[2]} degrees.")
     
+def weekly_temp():
+    question_qount = len(days_of_week)
+    for x in range (question_qount):
+        pet = input(f"Enter the temperature for {days_of_week[x]}. ")
+        week_temp.append(pet)
+    
 print("Welcome to the temperature calculator. Here you can use celsius, ferinheight or kalvin (please use C, F or K).")
 record_temp()
-    
+weekly_temp()
+print(week_temp)
+
 #Next Thing is to colect temp for all week
 
 #Then calculate averages

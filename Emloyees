@@ -1,0 +1,48 @@
+###########################
+#Employee Dictionary
+#Alexander David Sampson
+#2/21/2024
+#Task: Complete functions with the provided info
+###########################
+
+import easygui as easy
+
+#Create a list of employees dictionary(wich are dict)
+employee = {"employee1":{
+            "name":"Slater",
+            "job":"teacher",
+            "location": "CCHS",
+            "start_date": 2018
+            },
+            "employee2":{
+            },
+            }
+            
+#llok and string methods and slicing
+def add_person():
+    for x in range(5):
+        add_name = easy.enterbox("What is your name?", "Employee Info Gathering")
+        add_name
+        employee["employee[x]"]["Name"] = add_name
+        
+        add_job = easy.enterbox("What is your job?", "Employee Info Gathering")
+        add_job
+        employee["employee[x]"]["Job"] = add_job
+        
+        add_loc = easy.enterbox("What location do you work at?", "Employee Info Gathering")
+        add_loc
+        employee["employee[x]"]["Location"] = add_loc
+        
+        add_start_date = easy.enterbox("When did you start working?", "Employee Info Gathering")
+        add_start_date
+        employee["employee[x]"]["Start Date"] = add_start_date
+        
+    easy.msgbox(f"The employees names are {employee['employee2']['Name']} and {employee['employee1']['name']}.")
+    
+#def print_job_location_pairs():
+    #Print out ALL jobs and their locations
+    
+#def print_possible_raise():
+    #If employee started prior to 2020,
+    #eligible for a raise, print out data
+    #for individual

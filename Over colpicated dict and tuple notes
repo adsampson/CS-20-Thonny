@@ -1,0 +1,62 @@
+mylist = ["Boots", "Runners"]
+#duplicates are allowed
+#Change is possible (mutable)
+#Ex .append(),.remove() and .clear(). Methods can alter data
+
+mytuple = ("apple", "banana", "apple")
+#Cange is not possible, duplicate are
+#To change tuple you must reassign. (non-mutable)
+
+#mydictionary = {key:value,key:value}
+mytruck = {"Brand":"Toyota","model":"Tundra","year":2024,"color":"blue"}
+
+
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# if "model" in thisdict:
+#   print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+#Adds "color" as "red"
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# thisdict["color"] = "red"
+# print(thisdict)
+
+#gets rid of "Model"
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# thisdict.pop("model")
+# print(thisdict)
+
+#del deletes the specified key and value (del thisdict[key]) or the whole dictonary. Clear clears the whole dictionary
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# del thisdict
+# print(thisdict)
+#this will cause an error because "thisdict" no longer exists.
+# Prints key and values 
+# for x, y in thisdict.items():
+#   print(x, y)
+
+# l = 10
+# w = 15
+# h = 12
+# 
+# def shape_calc(l, w, h):
+#     area = 2(l*w+l*h+w*h)
+#     volume = l*w*h
+#     shape_data = (area, volume)
+#     return shape_data
+# print()

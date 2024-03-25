@@ -7,27 +7,38 @@
 
 import easygui as easy
 
-employee = [{"name":"Slater", "job":"teacher", "location": "CCHS", "start date": 2018},
-            ]
+employee = [{"name":"Slater", "job":"teacher", "location": "CCHS", "start date": 2018},]
 
 def add_person():
-    for x in range(1):
-        cat = easy.enterbox("enter the name of the employee.")
-        dog = easy.enterbox("enter the job of the employee.")
-        bird = easy.enterbox("enter the location the employee works at.")
-        pet = easy.enterbox("enter the start date of the employee.")
+    yes_no = ["Yes", "No"]
+    repeat = easy.choicebox("Do you wish to add a new emloyee?","Register", yes_no)
+    if repeat == "Yes":
+        cat = easy.enterbox("Enter the name of the employee.")
+        dog = easy.enterbox("Enter the job of the employee.")
+        bird = easy.enterbox("Enter the location the employee works at.")
+        pet = easy.enterbox("Enter the start date of the employee.")
         employee.append({'name':cat,'job':dog,'location':bird, 'start date':pet})
+        add_person()  
+    else:
+        pass
 
 def print_job_location_pairs():
+    #all_pairs = [f"{employee['name']} is a {employee['job']} and they work at {employee['location']}"]
     for person in employee:
-        print(person['job'])
-        print(person['location'])    
+        job_pair = f"{person['name']} is a {person['job']} and they work at {person['location']}"
+        #all_pairs.append(job_pairs)
+        easy.msgbox(job_pair,"job")    
 
-# def print_possible_raise():
-#     if int(employee["start date"]) < 2020:
-#         print("You get a raise")
 
+
+def print_possible_raise():
+    for person in employee:
+        date = int(person["start date"])
+        if date > 2016:
+            print(f"{person['name']} can get a raise")
+        else:
+            print(f"{person['name']} can not get a raise yet")
+            
 add_person()
-print(employee)
 print_job_location_pairs()
-# print_possible_raise()
+print_possible_raise()

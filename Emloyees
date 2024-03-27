@@ -7,9 +7,9 @@
 
 import easygui as easy
 #this will show a usefull intri message to explaim how to use this code
-easy.msgbox("Welcome to Alex's employee databae. Use the shell control the code. Your options are add_person() to add employees. job_location_pairs() to print who does what were. possible_raise() to see who worked long enough to get a raise.","Eployee database")
+easy.msgbox("Welcome to Alex's employee databae. Use the shell control the code. Your options are add_person() to add employees. job_location_pairs() to print who does what where. possible_raise() to see who worked long enough to get a raise.","Eployee database")
 #this is the list of dict that data will be strored
-employee = [{"name":"Slater", "job":"teacher", "location": "CCHS", "start date": 2018},]
+employee = [{"name":"Mr. Slater", "job":"teacher", "location": "CCHS", "start date": 2018},]
 
 #This funtion will ask for the name, job, location of work and start date of the employee and add it to 'employee' list
 def add_person():
@@ -19,13 +19,10 @@ def add_person():
         name = easy.enterbox("Enter the name of the employee.","Eployee database")
         job = easy.enterbox("Enter the job of the employee.","Eployee database")
         loc = easy.enterbox("Enter the location the employee works at.","Eployee database")
-        start_date = easy.enterbox("Enter the start date of the employee.","Eployee database")
-        if start_date.isdigit():
-            employee.append({'name':name,'job':job,'location':loc, 'start date':start_date})
-            add_person()
+        start_date = easy.enterbox("Enter the start year of the employee.","Eployee database")
         while not start_date.isdigit():
             easy.msgbox("Thats not a number.","Eployee database")
-            start_date = easy.enterbox("Enter the start date of the employee.","Eployee database")
+            start_date = easy.enterbox("Enter the start year of the employee.","Eployee database")
         employee.append({'name':name,'job':job,'location':loc, 'start date':start_date})
         add_person()
     else:
@@ -45,12 +42,12 @@ def possible_raise():
     all_raises = ""
     for person in employee:
         date = int(person["start date"])
-        if date > 2016:
-            s_date = f"{person['name']} has meet the emloyment length requirement to get a raise."
+        if date < 2016:
+            s_date = f"{person['name']} has meet the employment length requirement to get a raise."
             all_raises += s_date
             all_raises += "\n"
         else:
-            st_date = f"{person['name']} has not meet the emloyment length requirement to get a raise."
+            st_date = f"{person['name']} has not meet the employment length requirement to get a raise."
             all_raises += st_date
             all_raises += "\n"
     easy.msgbox(all_raises,"Eployee database")

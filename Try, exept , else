@@ -1,0 +1,22 @@
+def ask_for_number():
+    number = input("Please provie an integer. ")
+    try:
+        converted_number = int(number)
+    except:
+        ask_for_number()
+    else:
+        is_even = is_int_even(converted_number)
+        if is_even:
+            print("your number is even")
+        else:
+            print("Your number is odd")
+
+def is_int_even(int_of_number):
+    if type(int_of_number) != int:   
+        raise Exception("Must pass in an int, duh")
+    if int_of_number%2 == 0:
+        return True 
+    else:
+        return False
+
+ask_for_number()

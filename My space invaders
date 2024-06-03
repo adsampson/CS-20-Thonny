@@ -9,7 +9,8 @@ import easygui as easy
 
 pygame.init()
 
-screen = pygame .display.set_mode((800,600))
+# Starts the screen *a size of 0,0 maks it the same size as the screen you got*
+screen = pygame.display.set_mode((800,600))
 
 # Backround
 backround = pygame.image.load('../images/background.png')
